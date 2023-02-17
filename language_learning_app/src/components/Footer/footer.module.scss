@@ -1,0 +1,10 @@
+@import './src/styles/main_style.scss';
+
+.container {
+    padding: 30px 70px;
+    text-align: center;
+
+    div {
+        @extend %ordinary_text;
+    }
+}
