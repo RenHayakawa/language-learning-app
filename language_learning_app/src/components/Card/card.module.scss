@@ -1,0 +1,49 @@
+@import './src/styles/main_style.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $beige;
+}
+
+.card {
+    width: 50%;
+    padding: 60px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 4px solid $dark_green;
+
+    button {
+        padding: 10px 20px;
+        text-transform: lowercase;
+        @extend %card_button_text;
+        cursor: pointer;
+        border: none;
+        border-radius: 7px;
+        background-color: #B5E296;
+
+        &:hover {
+            background-color: #98e167;
+        }
+    }
+}
+
+.word {
+    margin-bottom: 25px;
+    @extend %word_main_text;
+}
+
+.transcription {
+    margin-bottom: 60px;
+    @extend %word_transcription_text;
+}
+
+.russian {
+    @extend %word_russian_text;
+    color: #98e167;
+}

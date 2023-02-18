@@ -2,6 +2,13 @@
 
 $dark_green: #0E2D22;
 $light_green: #CBDDBF;
+$too_light_green: #d8ddd4be;
+$beige: #F4F1ED;
+$light_gray: #CAC8C6;
+$edit_button: #CBDDBF;
+$delete_button: #DF9292;
+$save_button: #B5E296;
+$cancel_button: #CBDDBF;
 
 // Text
 
@@ -16,11 +23,31 @@ $light_green: #CBDDBF;
 }
 
 %table_header_text {
-    font: 400 normal 20px/20px 'Playfair Display', serif;
+    font: 400 normal 16px/20px 'Playfair Display', serif;
+    text-transform: uppercase;
     color: $light_green;
 }
 
 %table_main_text {
-    font: 400 normal 20px/20px 'Playfair Display', serif;
+    font: 400 normal 16px/20px 'Playfair Display', serif;
+    color: $dark_green;
+}
+
+%word_main_text {
+    font: 500 normal 60px/60px 'Playfair Display', serif;
+    color: $dark_green;
+}
+
+%word_transcription_text {
+    font: 400 normal 30px/30px 'Playfair Display', serif;
+    color: $light_green;
+}
+
+%word_russian_text {
+    font: 400 normal 30px/30px 'Playfair Display', serif;
+}
+
+%card_button_text {
+    font: 400 normal 18px/20px 'Playfair Display', serif;
     color: $dark_green;
 }

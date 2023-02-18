@@ -1,0 +1,25 @@
+@import './src/styles/main_style.scss';
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+
+    thead {
+        background-color: $dark_green;
+    }
+
+    th {
+        padding: 10px;
+        @extend %table_header_text;
+    }
+
+    tbody {
+        background-color: $beige;
+    }
+}

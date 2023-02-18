@@ -1,0 +1,90 @@
+@import './src/styles/main_style.scss';
+
+tr:nth-child(even) {
+    background-color: $too_light_green;
+}
+
+tr td:last-child {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+td {
+    padding: 5px;
+    @extend %table_main_text;
+}
+
+input {
+    @extend %table_main_text;
+    text-align: center;
+    border: 1px solid $dark_green;
+}
+
+.edit_button {
+    width: 35px;
+    height: 25px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 5px;
+    background-color: $edit_button;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #afdc91;
+        transition: all 200ms ease;
+    }
+}
+
+.delete_button {
+    width: 35px;
+    height: 25px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 5px;
+    background-color: $delete_button;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #f67b7b;
+        transition: all 200ms ease;
+    }
+}
+
+.save_button {
+    width: 35px;
+    height: 25px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 5px;
+    background-color: $save_button;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #98e167;
+        transition: all 200ms ease;
+    }
+}
+
+.cancel_button {
+    width: 35px;
+    height: 25px;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 5px;
+    background-color: $cancel_button;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #afdc91;
+        transition: all 200ms ease;
+    }
+}

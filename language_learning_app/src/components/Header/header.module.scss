@@ -1,7 +1,7 @@
 @import './src/styles/main_style.scss';
 
 .container {
-    padding: 30px 70px;
+    padding: 1.5% 4%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,4 +32,11 @@ nav a {
     margin: 0 20px;
     @extend %ordinary_text;
     text-decoration: none;
+
+    &:hover {
+        font-weight: bold;
+        color: $light_green;
+        border-bottom: 2px solid $light_green;
+        transition: all 300ms ease;
+    }
 }
