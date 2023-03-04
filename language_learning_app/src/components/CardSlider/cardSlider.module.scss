@@ -1,0 +1,46 @@
+@import './src/styles/main_style.scss';
+
+.container {
+    padding: 1.5% 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $beige;
+}
+
+.prev-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $dark_green;
+    border-radius: 7px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #0e2d22ad;
+        transition: all 200ms ease;
+    }
+
+    img {
+        margin: 10px 15px;
+    }
+}
+
+.next-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $dark_green;
+    border-radius: 7px;
+    transform: rotate(180deg);
+
+    &:hover {
+        cursor: pointer;
+        background-color: #0e2d22ad;
+        transition: all 200ms ease;
+    }
+
+    img {
+        margin: 10px 15px;
+    }
+}

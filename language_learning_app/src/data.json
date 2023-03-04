@@ -5,7 +5,7 @@
         "transcription": "[ˈlɪt.əl] ",
         "russian": "немного",
         "tags": "количество",
-        "tags_json": "[\"u043au043eu043bu0438u0447u0435u0441u0442u0432u043e\"]"
+        "tags_json": "[\"aaa\"]"
     },
     {
         "id": "13269",
@@ -13,7 +13,7 @@
         "transcription": "[ˈjuːnɪvɜːs]",
         "russian": "вселенная",
         "tags": "космос",
-        "tags_json": "[\"u043au043eu0441u043cu043eu0441\"]"
+        "tags_json": "[\"bbb\"]"
     },
     {
         "id": "13271",
@@ -21,7 +21,7 @@
         "transcription": "[ˈkɔːnflaʊə]",
         "russian": "василек",
         "tags": "растения",
-        "tags_json": "[\"u0440u0430u0441u0442u0435u043du0438u044f\"]"
+        "tags_json": "[\"ccc\"]"
     },
     {
         "id": "13272",
@@ -29,7 +29,7 @@
         "transcription": "[biː]",
         "russian": "пчела",
         "tags": "насекомые",
-        "tags_json": "[\"u043du0430u0441u0435u043au043eu043cu044bu0435\"]"
+        "tags_json": "[\"ddd\"]"
     },
     {
         "id": "13289",
@@ -37,7 +37,7 @@
         "transcription": "[ˈlaɪlək]",
         "russian": "сирень",
         "tags": "растения",
-        "tags_json": "[\"u0440u0430u0441u0442u0435u043du0438u044f\"]"
+        "tags_json": "[\"eee\"]"
     },
     {
         "id": "13316",
@@ -45,7 +45,7 @@
         "transcription": "[ˈɔːrɪndʒ]",
         "russian": "апельсин",
         "tags": "фрукты",
-        "tags_json": "[\"\"]"
+        "tags_json": "[\"fff\"]"
     },
     {
         "id": "13334",
@@ -53,6 +53,6 @@
         "transcription": "stv:p",
         "russian": "остановка",
         "tags": "",
-        "tags_json": "[\"\"]"
+        "tags_json": "[\"ggg\"]"
     }
 ]

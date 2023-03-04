@@ -2,8 +2,8 @@ import CSSModules from 'react-css-modules';
 import style from '../Card/card.module.scss';
 import { useState } from 'react';
 
-function Card() {
-
+function Card({ data }) {
+    const { english, transcription, russian } = data;
     const [isTranslate, setIsTraslate] = useState(false);
 
     function getTranslate() {
@@ -12,15 +12,13 @@ function Card() {
 
     return (
         <div styleName='container'>
-            <div styleName='card'>
-                <div styleName='word'>Map</div>
-                <div styleName='transcription'>sefwe</div>
-                {
-                    isTranslate ?
-                        <div styleName='russian'>Карта</div> :
-                        <button onClick={getTranslate}>проверить</button>
-                }
-            </div>
+            <div styleName='word'>{english}</div>
+            <div styleName='transcription'>{transcription}</div>
+            {
+                isTranslate ?
+                    <div styleName='russian'>{russian}</div> :
+                    <button onClick={getTranslate}>проверить</button>
+            }
         </div>
     )
 }

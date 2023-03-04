@@ -27,8 +27,7 @@ function WordsList() {
                                 transcription={elem.transcription}
                                 russian={elem.russian}
                                 tags={elem.tags}
-                            >
-                            </TableRow>
+                            />
                         ))
                     }
                 </tbody>
