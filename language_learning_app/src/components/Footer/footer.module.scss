@@ -3,6 +3,7 @@
 .container {
     padding: 1.5% 4%;
     text-align: center;
+    background-color: white;
 
     div {
         @extend %ordinary_text;
