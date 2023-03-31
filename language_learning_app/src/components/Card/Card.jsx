@@ -2,12 +2,13 @@ import CSSModules from 'react-css-modules';
 import style from '../Card/card.module.scss';
 import { useState } from 'react';
 
-function Card({ data }) {
+function Card({ data, getWordsNumber }) {
     const { english, transcription, russian } = data;
     const [isTranslate, setIsTraslate] = useState(false);
 
     function getTranslate() {
         setIsTraslate(!isTranslate);
+        getWordsNumber();
     }
 
     return (
