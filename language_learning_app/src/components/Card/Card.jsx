@@ -1,15 +1,20 @@
 import CSSModules from 'react-css-modules';
 import style from '../Card/card.module.scss';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 function Card({ data, getWordsNumber }) {
     const { english, transcription, russian } = data;
     const [isTranslate, setIsTraslate] = useState(false);
+    const refButton = useRef();
 
     function getTranslate() {
         setIsTraslate(!isTranslate);
         getWordsNumber();
     }
+
+    useEffect(() => {
+        refButton.current.focus()
+    }, [])
 
     return (
         <div styleName='container'>
@@ -18,7 +23,7 @@ function Card({ data, getWordsNumber }) {
             {
                 isTranslate ?
                     <div styleName='russian'>{russian}</div> :
-                    <button onClick={getTranslate}>проверить</button>
+                    <button onClick={getTranslate} ref={refButton}>проверить</button>
             }
         </div>
     )
