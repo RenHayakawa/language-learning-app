@@ -6,7 +6,7 @@ import Footer from '../../components/Footer/Footer';
 function PageError() {
     return (
         <div styleName='container'>
-            <img src="./images/404.jpg" alt="page error 404" />
+            <img styleName='error-image' src="./images/404.jpg" alt="page error 404" />
             <Footer />
         </div>
     )
