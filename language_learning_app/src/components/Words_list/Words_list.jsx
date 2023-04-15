@@ -1,9 +1,13 @@
 import CSSModules from 'react-css-modules';
 import style from '../Words_list/words_list.module.scss';
 import TableRow from '../TableRow/TableRow';
-import tableData from '../../data.json';
+import { useContext } from 'react';
+import { Context } from '../../Context/Context'
 
 function WordsList() {
+
+    const { dataWords, setDataWords } = useContext(Context);
+
     return (
         <div styleName='container'>
             <table>
@@ -19,7 +23,7 @@ function WordsList() {
                 </thead>
                 <tbody>
                     {
-                        tableData.map((elem) => (
+                        dataWords.map((elem) => (
                             <TableRow
                                 key={elem.tags_json}
                                 id={elem.id}

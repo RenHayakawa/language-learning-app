@@ -2,8 +2,8 @@ import CSSModules from 'react-css-modules';
 import style from '../Card/card.module.scss';
 import { useState, useRef, useEffect } from 'react';
 
-function Card({ data, getWordsNumber }) {
-    const { english, transcription, russian } = data;
+function Card({ dataWords, getWordsNumber }) {
+    const { english, transcription, russian } = dataWords;
     const [isTranslate, setIsTraslate] = useState(false);
     const refButton = useRef();
 
