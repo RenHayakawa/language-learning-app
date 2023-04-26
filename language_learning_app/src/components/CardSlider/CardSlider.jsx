@@ -7,7 +7,7 @@ import { Context } from '../../Context/Context';
 function CardSlider() {
     const [sliderIndex, setSliderIndex] = useState(0);
     const [wordsNumber, setWordsNumber] = useState(0);
-    const { dataWords, setDataWords } = useContext(Context);
+    const { dataWords } = useContext(Context);
 
     function getPreviousWord() {
         if (sliderIndex > 0) {

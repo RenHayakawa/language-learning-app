@@ -25,7 +25,7 @@ function WordsList() {
                     {
                         dataWords.map((elem) => (
                             <TableRow
-                                key={elem.tags_json}
+                                key={elem.id}
                                 id={elem.id}
                                 english={elem.english}
                                 transcription={elem.transcription}

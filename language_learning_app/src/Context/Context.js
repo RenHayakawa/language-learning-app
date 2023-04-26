@@ -4,16 +4,38 @@ export const Context = createContext();
 
 export function ContextProvider({ children }) {
 
-    const [dataWords, setDataWords] = useState(false);
+    const [dataWords, setDataWords] = useState([]);
 
     useEffect(() => {
-        async function Fetch() {
-            const response = await fetch('http://itgirlschool.justmakeit.ru/api/words');
-            const words = await response.json();
-            setDataWords(words);
-        }
         Fetch()
     }, [])
+
+    const Fetch = () => {
+        fetch('http://itgirlschool.justmakeit.ru/api/words')
+            .then((response) => response.json())
+            .then((response) => setDataWords(response))
+            .catch((error) => console.log(error))
+    }
+
+    function saveWordsInput(inputText) {
+        fetch(`http://itgirlschool.justmakeit.ru/api/words/${inputText.id}/update`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(inputText)
+        })
+            .then(() => Fetch())
+            .catch((error) => console.log(error))
+    }
+
+    function deleteWordsInput(id) {
+        fetch(`http://itgirlschool.justmakeit.ru/api/words/${id}/delete`, {
+            method: 'POST'
+        })
+            .then(() => Fetch())
+            .catch((error) => console.log(error))
+    }
 
     if (!dataWords) {
         return (
@@ -21,7 +43,7 @@ export function ContextProvider({ children }) {
         )
     }
 
-    const value = { dataWords, setDataWords };
+    const value = { dataWords, saveWordsInput, deleteWordsInput };
 
     return (
         <Context.Provider value={value}>
