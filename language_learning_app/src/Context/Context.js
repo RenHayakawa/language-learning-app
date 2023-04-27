@@ -1,4 +1,5 @@
 import React, { useState, useEffect, createContext } from 'react';
+import Error from '../components/Error/Error';
 
 export const Context = createContext();
 
@@ -39,7 +40,7 @@ export function ContextProvider({ children }) {
 
     if (!dataWords) {
         return (
-            <h1>Loading...</h1>
+            <Error />
         )
     }
 
