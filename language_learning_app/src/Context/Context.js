@@ -6,6 +6,7 @@ export const Context = createContext();
 export function ContextProvider({ children }) {
 
     const [dataWords, setDataWords] = useState([]);
+    const [isError, setIsError] = useState(false);
 
     useEffect(() => {
         Fetch()
@@ -15,7 +16,10 @@ export function ContextProvider({ children }) {
         fetch('http://itgirlschool.justmakeit.ru/api/words')
             .then((response) => response.json())
             .then((response) => setDataWords(response))
-            .catch((error) => console.log(error))
+            .catch((error) => {
+                setIsError(error);
+                console.log(error);
+            })
     }
 
     function saveWordsInput(inputText) {
@@ -27,7 +31,10 @@ export function ContextProvider({ children }) {
             body: JSON.stringify(inputText)
         })
             .then(() => Fetch())
-            .catch((error) => console.log(error))
+            .catch((error) => {
+                setIsError(error);
+                console.log(error);
+            })
     }
 
     function deleteWordsInput(id) {
@@ -35,10 +42,19 @@ export function ContextProvider({ children }) {
             method: 'POST'
         })
             .then(() => Fetch())
-            .catch((error) => console.log(error))
+            .catch((error) => {
+                setIsError(error);
+                console.log(error);
+            })
     }
 
     if (!dataWords) {
+        return (
+            <p>Loading...</p>
+        )
+    }
+
+    if (isError) {
         return (
             <Error />
         )
